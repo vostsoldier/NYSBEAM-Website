@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */ /* Removed to prevent centering */
+    min-height: 100vh;
+    background-color: #FCF8FF; /* Very light purple background */
+}
+
+header, footer {
+    background-color: #66567A; /* Dark purple for header and footer */
+    color: #ffffff; /* Text color for better contrast */
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    position: fixed; /* Fixed to top */
+    top: 0;
+    width: 100%; /* Ensure it spans the full width */
+    background-color: #66567A; /* Changed to dark purple for better contrast */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000; /* Ensure nav stays on top */
+}
+
+nav ul {
+    list-style: none;
+    padding: 15px 0; /* Adjusted padding for a more spacious look */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 20px; /* Increased spacing between nav items */
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff; /* White links for better contrast on dark nav */
+    font-weight: bold;
+    background-color: #C7B7DE; /* Light purple for nav buttons */
+    padding: 8px 12px; /* Adjusted padding for smaller buttons */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    font-size: 14px; /* Consistent font size */
+    outline: none; /* Removed outline for nav buttons */
+}
+
+nav a:hover {
+    background-color: #F6EBFF; /* Light purple on hover for contrast */
+    transform: scale(1.05); /* Slight enlargement on hover */
+}
+
+main {
+    padding: 80px 20px 20px 20px; /* Adjusted top padding to accommodate fixed nav */
+    flex: 1;
+}
+
+section {
+    margin-bottom: 40px;
+    /* text-align: center; */ /* Removed to prevent centering */
+}
+
+footer {
+    margin-top: auto;
+    background-color: #66567A; /* Dark purple for footer */
+}
+
+header {
+    margin-top: 0; 
+    padding: 40px 20px; /* Increased padding for more space */
+    background-color: #66567A; /* Dark purple for header */
+    color: #ffffff; /* Text color for better contrast */
+    text-align: center;
+}
+
+header h1 {
+    margin-top: 20px; /* Adjusted margin for better positioning */
+    color: #F6EBFF; /* Light purple for better contrast */
+}
