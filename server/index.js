@@ -8,12 +8,27 @@ dotenv.config();
 
 const app = express();
 
-// Middleware
+// Allowed origins
+const allowedOrigins = [
+  'http://localhost:3000', // Local development
+  'https://nysbeam-website.vercel.app', // Production on Vercel
+];
+
+// CORS Configuration
 app.use(cors({
-  origin: 'https://nysbeam-website.vercel.app/', 
+  origin: function(origin, callback){
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if(!origin) return callback(null, true);
+    if(allowedOrigins.indexOf(origin) === -1){
+      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+      return callback(new Error(msg), false);
+    }
+    return callback(null, true);
+  },
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 }));
+
 app.use(express.json());
 
 // Import Routes
