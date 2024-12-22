@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom'; // Import Link
 import '../index.css'; // Import existing CSS
 
 const Home = () => {
@@ -40,17 +41,6 @@ const Home = () => {
 
   return (
     <div>
-      <header>
-        <nav>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/projects">Our Projects</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-          </ul>
-        </nav>
-        <h1>Welcome to NYSBEAM</h1>
-      </header>
       <main>
         <section id="about">
           <h2>About Us</h2>
@@ -61,9 +51,6 @@ const Home = () => {
           <p>Contact information.</p>
         </section>
       </main>
-      <footer>
-        <p>&copy; 2023 NYSBEAM</p>
-      </footer>
     </div>
   );
 };

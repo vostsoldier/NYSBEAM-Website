@@ -1,41 +1,22 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout'; // Import Layout
 import Home from './components/Home';
 import About from './components/About';
 import Projects from './components/Projects';
+import Signup from './components/Signup'; // Import Signup
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/projects" element={<Projects />} />
-    </Routes>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/signup" element={<Signup />} /> {/* Add Signup Route */}
+      </Routes>
+    </Layout>
   );
 }
-document.addEventListener('DOMContentLoaded', () => {
-  console.log('NYSBEAM website loaded.');
 
-  const sections = document.querySelectorAll('section');
-  const headerTitle = document.querySelector('header h1');
-
-  const observerOptions = {
-      threshold: 0.1
-  };
-
-  const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-          if(entry.isIntersecting){
-              entry.target.classList.add('visible');
-              observer.unobserve(entry.target);
-          }
-      });
-  }, observerOptions);
-
-  sections.forEach(section => {
-      observer.observe(section);
-  });
-
-  observer.observe(headerTitle);
-});
 export default App;

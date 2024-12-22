@@ -1,3 +1,11 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -202,6 +210,7 @@ header h1.visible {
 
 .project-card img {
   width: 100%;
+  max-width: 200px; /* Adjust as needed */
   height: auto;
   border-radius: 10px;
   object-fit: cover;
@@ -226,31 +235,115 @@ header h1.visible {
 /* Responsive Adjustments for Projects */
 @media (max-width: 600px) {
   .project-card {
-      padding: 15px;
+    padding: 15px;
   }
 
   .project-card img {
-      margin-bottom: 10px;
+    margin-bottom: 10px;
+    max-width: 150px; /* Decreased image size */
   }
 
   .project-card h3 {
-      font-size: 1.2em;
+    font-size: 1.2em;
   }
-}
 
-@media (max-width: 600px) {
   .team-member {
-      padding: 10px; /* Further reduced padding for smaller screens */
-      min-height: 250px; /* Reduced min-height for smaller screens */
+    padding: 10px; /* Further reduced padding for smaller screens */
+    min-height: 250px; /* Reduced min-height for smaller screens */
   }
 
   .team-member img {
-      width: 100px;
-      height: 100px;
-      margin-bottom: 10px;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
   }
 
   .team-member .description {
-      padding: 10px;
+    padding: 10px;
   }
+}/* Existing CSS above */
+
+/* Signup Form Styles */
+.signup-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.signup-button {
+  padding: 12px 24px;
+  background-color: #A9A9A9;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.signup-button:hover {
+  background-color: #696969;
+  transform: scale(1.05);
+}
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.signup-form input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.signup-form input:focus {
+  border-color: #A9A9A9;
+  outline: none;
+}
+
+.signup-form button {
+  padding: 10px;
+  background-color: #A9A9A9;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-form button:hover {
+  background-color: #696969;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 15px;
+  text-align: center;
+}
+section {
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.app-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
