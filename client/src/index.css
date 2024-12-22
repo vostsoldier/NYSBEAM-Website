@@ -15,6 +15,7 @@ body {
   min-height: 100vh;
   background-color: #F5F5F5;
   scroll-behavior: smooth;
+  color: #66567A;
 }
 
 header, footer {
@@ -25,22 +26,14 @@ header, footer {
   transition: background-color 0.3s ease;
 }
 
-header:hover, footer:hover {
-  background-color: #B0B0B0;
-}
-
 nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #A9A9A9;
+  background-color: #CFBFD8;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   z-index: 1000;
   transition: background-color 0.3s ease;
-}
-
-nav:hover {
-  background-color: #B0B0B0;
 }
 
 nav ul {
@@ -57,9 +50,9 @@ nav li {
 
 nav a {
   text-decoration: none;
-  color: #333333;
+  color: #ffffff; /* White text for contrast */
   font-weight: bold;
-  background-color: #D3D3D3;
+  background-color: #B1A0D0; /* Soft Lavender */
   padding: 8px 12px;
   border-radius: 5px;
   transition: background-color 0.3s, transform 0.3s, color 0.3s;
@@ -68,14 +61,15 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #C0C0C0;
+  background-color: #A392C0; /* Slightly Darker Lavender */
   transform: scale(1.05);
-  color: #000000;
+  color: #ffffff; /* Maintain white text on hover */
 }
 
 main {
   padding: 80px 20px 20px 20px;
   flex: 1;
+  background-color: #FCF8FF;
 }
 
 section {
@@ -92,28 +86,24 @@ section.visible {
 
 footer {
   margin-top: auto;
-  background-color: #D3D3D3;
+  background-color: #CFBFD8;
 }
 
 header {
   margin-top: 0; 
   padding: 40px 0px;
-  background-color: #D3D3D3;
+  background-color: #C7B7DE;
   color: #A9A9A9;
   text-align: center;
   transition: background-color 0.3s ease;
 }
 
-header:hover {
-  background-color: #E0E0E0;
-}
-
 header h1 {
   margin-top: 50px;
-  color: #808080;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  color: #66567A;
 }
 
 header h1.visible {
@@ -346,4 +336,10 @@ section.visible {
   display: flex;
   flex-direction: column;
   flex: 1;
+}
+
+/* 2. Make specific paragraphs lighter */
+#about p,
+#contact p {
+  color: #A398C1; /* Adjust this hex code to achieve the desired lighter shade */
 }

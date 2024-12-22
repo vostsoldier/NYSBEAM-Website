@@ -42,7 +42,7 @@ app.use((err, req, res, next) => {
 });
 
 // Sync Database and Start Server
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 sequelize.sync()
     .then(() => {
         console.log('Database synced successfully.');
