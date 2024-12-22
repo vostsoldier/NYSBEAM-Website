@@ -63,6 +63,62 @@ const About = () => {
               <p>Sidrat manages the strategic planning and development initiatives for NYSBEAM.</p>
             </div>
           </div>
+          <div className="team-member">
+            <img src="https://via.placeholder.com/100" alt="Arian" />
+            <h3>Arian</h3>
+            <p className="role">Vice-President</p>
+            <div className="description">
+              <p>Sidrat manages the strategic planning and development initiatives for NYSBEAM.</p>
+            </div>
+          </div>
+          <div className="team-member">
+            <img src="https://via.placeholder.com/100" alt="Abdullah" />
+            <h3>Abdullah</h3>
+            <p className="role">Secretary</p>
+            <div className="description">
+              <p>Sidrat manages the strategic planning and development initiatives for NYSBEAM.</p>
+            </div>
+          </div>
+          <div className="team-member">
+            <img src="https://via.placeholder.com/100" alt="Ryan" />
+            <h3>Ryan</h3>
+            <p className="role">Financial-Manager</p>
+            <div className="description">
+              <p>Sidrat manages the strategic planning and development initiatives for NYSBEAM.</p>
+            </div>
+          </div>
+          <div className="team-member">
+            <img src="https://via.placeholder.com/100" alt="Fiona" />
+            <h3>Fiona</h3>
+            <p className="role">Designer</p>
+            <div className="description">
+              <p>Sidrat manages the strategic planning and development initiatives for NYSBEAM.</p>
+            </div>
+          </div>
+          <div className="team-member">
+            <img src="https://via.placeholder.com/100" alt="Briana" />
+            <h3>Briana</h3>
+            <p className="role">Designer</p>
+            <div className="description">
+              <p>Sidrat manages the strategic planning and development initiatives for NYSBEAM.</p>
+            </div>
+          </div>
+          <div className="team-member">
+            <img src="https://via.placeholder.com/100" alt="Peter" />
+            <h3>Peter</h3>
+            <p className="role">Webmaster</p>
+            <div className="description">
+              <p>Sidrat manages the strategic planning and development initiatives for NYSBEAM.</p>
+            </div>
+          </div>
+          <div className="team-member">
+            <img src="https://via.placeholder.com/100" alt="Mason" />
+            <h3>Mason</h3>
+            <p className="role">Social Media Manager</p>
+            <div className="description">
+              <p>Sidrat manages the strategic planning and development initiatives for NYSBEAM.</p>
+            </div>
+          </div>
         </div>
       </section>
       <section id="history">

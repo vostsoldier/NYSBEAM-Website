@@ -2,18 +2,16 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../index.css'; // Import existing CSS
 
-const Signup = () => {
+const Login = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    name: '',
     email: '',
     password: '',
-    confirmPassword: '',
   });
 
   const [error, setError] = useState('');
 
-  const { name, email, password, confirmPassword } = formData;
+  const { email, password } = formData;
 
   const handleChange = e => {
     setFormData({...formData, [e.target.name]: e.target.value});
@@ -23,20 +21,15 @@ const Signup = () => {
     e.preventDefault();
     setError('');
 
-    if(password !== confirmPassword){
-      setError('Passwords do not match');
-      return;
-    }
-
     try {
       const apiUrl = process.env.REACT_APP_API_URL.replace(/\/+$/, '');
 
-      const response = await fetch(`${apiUrl}/api/users/register`, {
+      const response = await fetch(`${apiUrl}/api/users/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ name, email, password })
+        body: JSON.stringify({ email, password })
       });
 
       const data = await response.json();
@@ -48,7 +41,7 @@ const Signup = () => {
         navigate('/');
       } else {
         // Handle errors returned from the server
-        setError(data.message || 'Registration failed');
+        setError(data.message || 'Login failed');
       }
     } catch (err) {
       setError('An error occurred. Please try again.');
@@ -56,7 +49,7 @@ const Signup = () => {
   };
 
   useEffect(() => {
-    const section = document.getElementById('signup-section');
+    const section = document.getElementById('login-section');
 
     const observerOptions = {
       threshold: 0.1
@@ -84,22 +77,12 @@ const Signup = () => {
   }, []);
 
   return (
-    <div className="signup-container">
+    <div className="login-container">
       {/* Wrap the form in a <section> for animation */}
-      <section id="signup-section">
-        <h2>Create New Account</h2>
+      <section id="login-section">
+        <h2>Login</h2>
         {error && <p className="error-message">{error}</p>}
-        <form onSubmit={handleSubmit} className="signup-form">
-          <label htmlFor="name">Name:</label>
-          <input 
-            type="text" 
-            id="name" 
-            name="name" 
-            value={name}
-            onChange={handleChange}
-            required 
-          />
-
+        <form onSubmit={handleSubmit} className="login-form">
           <label htmlFor="email">Email:</label>
           <input 
             type="email" 
@@ -120,21 +103,11 @@ const Signup = () => {
             required 
           />
 
-          <label htmlFor="confirmPassword">Confirm Password:</label>
-          <input 
-            type="password" 
-            id="confirmPassword" 
-            name="confirmPassword" 
-            value={confirmPassword}
-            onChange={handleChange}
-            required 
-          />
-
-          <button type="submit">Sign Up</button>
+          <button type="submit">Login</button>
         </form>
       </section>
     </div>
   );
 };
 
-export default Signup;
+export default Login;
