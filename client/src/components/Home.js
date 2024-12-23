@@ -27,6 +27,7 @@ const Home = () => {
     if (headerTitle) {
       observer.observe(headerTitle);
     }
+
     return () => {
       sections.forEach(section => {
         observer.unobserve(section);
@@ -47,6 +48,14 @@ const Home = () => {
           <p>as well as spreading awareness about having a good mindset</p>
           <p>We host online workshops, podcasts, fundraisers, and alot more!</p>
         </section>
+        <h2>Activities</h2>
+        <div className="home-boxes">
+          <div className="home-box">
+            <img src="https://via.placeholder.com/150" alt="Box 2" />
+            <p>Box-Breathing</p>
+            <Link to="/box-breathing"><button className="home-button">Get Started</button></Link>
+          </div>
+        </div>
         <section id="contact">
           <h2>Contact Us</h2>
           <p>Feel free to shoot us a email through board@nysbeam.org</p>
