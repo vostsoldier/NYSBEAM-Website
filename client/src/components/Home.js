@@ -42,11 +42,15 @@ const Home = () => {
       <main>
         <section id="about">
           <h2>About Us</h2>
-          <p>Information about NYSBEAM.</p>
+          <p>BEAM is a non-profit organization founded in New York State, specifically New York City</p>
+          <p>We promote mental health, such as the importance of caring for one's mental state,</p>
+          <p>as well as spreading awareness about having a good mindset</p>
+          <p>We host online workshops, podcasts, fundraisers, and alot more!</p>
         </section>
         <section id="contact">
           <h2>Contact Us</h2>
-          <p>Contact information.</p>
+          <p>Feel free to shoot us a email through board@nysbeam.org</p>
+          <p>Shoot us a follow and a tag on instagram, @NYSBEAM</p>
         </section>
       </main>
     </div>
