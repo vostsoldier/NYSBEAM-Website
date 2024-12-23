@@ -1,7 +1,5 @@
-// filepath: /server/controllers/projectController.js
 const Project = require('../models/Project');
 
-// Get All Projects
 exports.getProjects = async (req, res) => {
     try {
         const projects = await Project.findAll();
@@ -10,8 +8,6 @@ exports.getProjects = async (req, res) => {
         res.status(500).json({ message: 'Server error' });
     }
 };
-
-// Create a New Project
 exports.createProject = async (req, res) => {
     const { title, description, status, image } = req.body;
 

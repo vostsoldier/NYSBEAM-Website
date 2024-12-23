@@ -1,19 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import '../index.css'; // Ensure CSS is imported
+import { AuthContext } from '../context/AuthContext'; 
+import '../index.css'; 
 
 const Layout = ({ children }) => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-  useEffect(() => {
-    const token = localStorage.getItem('token');
-    setIsAuthenticated(!!token);
-  }, []);
-
-  const handleLogout = () => {
-    localStorage.removeItem('token');
-    setIsAuthenticated(false);
-  };
+  const { isAuthenticated, logout } = useContext(AuthContext); 
 
   return (
     <div className="app-container">
@@ -25,7 +16,7 @@ const Layout = ({ children }) => {
             <li><Link to="/projects">Our Projects</Link></li>
             {!isAuthenticated && <li><Link to="/signup">Create Account</Link></li>}
             {!isAuthenticated && <li><Link to="/login">Login</Link></li>}
-            {isAuthenticated && <li><button onClick={handleLogout} className="logout-button">Logout</button></li>}
+            {isAuthenticated && <li><button onClick={logout} className="logout-button">Logout</button></li>}
           </ul>
         </nav>
         <h1>NYSBEAM</h1>

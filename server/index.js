@@ -3,22 +3,18 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const sequelize = require('./config/config');
 
-// Load environment variables
 dotenv.config();
 
 const app = express();
 
-// Allowed origins
 const allowedOrigins = [
-  'http://localhost:3000', // Local development
-  'https://nysbeam-website.vercel.app', // Production on Vercel
-  'https://nysbeam-website-production.up.railway.app', // Production on Railway
+  'http://localhost:3000', 
+  'https://nysbeam-website.vercel.app', 
+  'https://nysbeam-website-production.up.railway.app', 
 ];
 
-// CORS Configuration
 app.use(cors({
   origin: function(origin, callback){
-    // Allow requests with no origin (like mobile apps or curl requests)
     if(!origin) return callback(null, true);
     if(!allowedOrigins.includes(origin)){
       const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
@@ -32,27 +28,22 @@ app.use(cors({
 
 app.use(express.json());
 
-// Import Routes
 const userRoutes = require('./routes/userRoutes');
 const projectRoutes = require('./routes/projectRoutes');
 
-// Use Routes
 app.use('/api/users', userRoutes);
 app.use('/api/projects', projectRoutes);
 
-// Root Endpoint
 app.get('/', (req, res) => {
     res.send('API is running...');
 });
 
-// Error Handling for Undefined Routes
 app.use((req, res, next) => {
     const error = new Error(`Not Found - ${req.originalUrl}`);
     res.status(404);
     next(error);
 });
 
-// Global Error Handler
 app.use((err, req, res, next) => {
     res.status(res.statusCode === 200 ? 500 : res.statusCode);
     res.json({
@@ -61,7 +52,6 @@ app.use((err, req, res, next) => {
     });
 });
 
-// Sync Database and Start Server
 const PORT = process.env.PORT || 5001;
 sequelize.sync()
     .then(() => {

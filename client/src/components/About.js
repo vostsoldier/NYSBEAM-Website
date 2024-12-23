@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
-import '../index.css'; // Import existing CSS
-
+import '../index.css'; 
 const About = () => {
   useEffect(() => {
     const sections = document.querySelectorAll('section');
@@ -27,7 +26,6 @@ const About = () => {
       observer.observe(headerTitle);
     }
 
-    // Cleanup on unmount
     return () => {
       sections.forEach(section => {
         observer.unobserve(section);

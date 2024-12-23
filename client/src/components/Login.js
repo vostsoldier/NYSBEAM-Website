@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../index.css'; // Import existing CSS
+import { AuthContext } from '../context/AuthContext';
+import '../index.css'; 
 
 const Login = () => {
   const navigate = useNavigate();
+  const { login } = useContext(AuthContext); 
   const [formData, setFormData] = useState({
     email: '',
     password: '', 
@@ -35,12 +37,9 @@ const Login = () => {
       const data = await response.json();
 
       if(response.ok){
-        // Store token in localStorage
-        localStorage.setItem('token', data.token);
-        // Redirect to home page
+        login(data.token);
         navigate('/');
       } else {
-        // Handle errors returned from the server
         setError(data.message || 'Login failed');
       }
     } catch (err) {
@@ -55,11 +54,11 @@ const Login = () => {
       threshold: 0.1
     };
 
-    const observer = new IntersectionObserver((entries, observer) => {
+    const observer = new IntersectionObserver((entries, observerRef) => {
       entries.forEach(entry => {
         if(entry.isIntersecting){
           entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
+          observerRef.unobserve(entry.target);
         }
       });
     }, observerOptions);
@@ -68,7 +67,6 @@ const Login = () => {
       observer.observe(section);
     }
 
-    // Cleanup on unmount
     return () => {
       if (section) {
         observer.unobserve(section);
@@ -78,7 +76,6 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      {/* Wrap the form in a <section> for animation */}
       <section id="login-section">
         <h2>Login</h2>
         {error && <p className="error-message">{error}</p>}

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import '../index.css'; // Import existing CSS
+import '../index.css'; 
 
 const Projects = () => {
   useEffect(() => {
@@ -27,7 +27,6 @@ const Projects = () => {
       observer.observe(headerTitle);
     }
 
-    // Cleanup on unmount
     return () => {
       sections.forEach(section => {
         observer.unobserve(section);
@@ -57,7 +56,6 @@ const Projects = () => {
             <h3>Project Two</h3>
             <p className="project-description">A brief description of Project Two.</p>
           </div>
-          {/* Add more project cards as needed */}
         </div>
       </section>
       <section id="completed-projects">
@@ -73,7 +71,6 @@ const Projects = () => {
             <h3>Project Four</h3>
             <p className="project-description">A brief description of Project Four.</p>
           </div>
-          {/* Add more project cards as needed */}
         </div>
       </section>
     </main>

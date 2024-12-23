@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom'; // Import Link
-import '../index.css'; // Import existing CSS
+import { Link } from 'react-router-dom'; 
+import '../index.css'; 
 
 const Home = () => {
   useEffect(() => {
@@ -27,8 +27,6 @@ const Home = () => {
     if (headerTitle) {
       observer.observe(headerTitle);
     }
-
-    // Cleanup on unmount
     return () => {
       sections.forEach(section => {
         observer.unobserve(section);
