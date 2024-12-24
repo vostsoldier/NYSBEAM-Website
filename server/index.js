@@ -30,9 +30,11 @@ app.use(express.json());
 
 const userRoutes = require('./routes/userRoutes');
 const projectRoutes = require('./routes/projectRoutes');
+const newsletterRoutes = require('./routes/newsletterRoutes');
 
 app.use('/api/users', userRoutes);
 app.use('/api/projects', projectRoutes);
+app.use('/api/newsletter', newsletterRoutes);
 
 app.get('/', (req, res) => {
     res.send('API is running...');

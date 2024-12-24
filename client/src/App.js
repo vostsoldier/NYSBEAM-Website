@@ -7,6 +7,7 @@ import Projects from './components/Projects';
 import Signup from './components/Signup';
 import Login from './components/Login';
 import BoxBreathing from './components/BoxBreathing'; // Import BoxBreathing
+import Newsletter from './components/Newsletter';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/box-breathing" element={<BoxBreathing />} /> {/* Add BoxBreathing Route */}
+        <Route path="/newsletter" element={<Newsletter />} /> {/* Add Newsletter Route */}
       </Routes>
     </Layout>
   );

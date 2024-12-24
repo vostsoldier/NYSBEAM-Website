@@ -57,7 +57,7 @@ const About = () => {
         <h2>Our Team</h2>
         <div className="team-members">
           <div className="team-member">
-            <img src={VivianImg} alt="Vivian" />
+            <img loading="lazy" src={VivianImg} alt="Vivian" />
             <h3>Vivian</h3>
             <p className="role">Co-President</p>
             <div className="description">
@@ -65,7 +65,7 @@ const About = () => {
             </div>
           </div>
           <div className="team-member">
-            <img src={SidratImg} alt="Sidrat" />
+            <img loading="lazy"src={SidratImg} alt="Sidrat" />
             <h3>Sidrat</h3>
             <p className="role">Co-President</p>
             <div className="description">
@@ -73,7 +73,7 @@ const About = () => {
             </div>
           </div>
           <div className="team-member">
-            <img src={ArianImg} alt="Arian" />
+            <img loading="lazy" src={ArianImg} alt="Arian" />
             <h3>Arian</h3>
             <p className="role">Vice-President</p>
             <div className="description">
@@ -81,23 +81,23 @@ const About = () => {
             </div>
           </div>
           <div className="team-member">
-            <img src={AbdullahImg} alt="Abdullah" />
+            <img loading="lazy"src={AbdullahImg} alt="Abdullah" />
             <h3>Abdullah</h3>
-            <p className="role">Secretary</p>
+            <p className="role">Co-Secretary</p>
             <div className="description">
               <p>Abdullah manages the strategic planning and development initiatives for NYSBEAM.</p>
             </div>
           </div>
           <div className="team-member">
-            <img src={AaronImg} alt="Aaron" />
+            <img loading="lazy" src={AaronImg} alt="Aaron" />
             <h3>Aaron</h3>
-            <p className="role">Designer</p>
+            <p className="role">Co-Secretary</p>
             <div className="description">
               <p>Aaron manages the creative design aspects for NYSBEAM.</p>
             </div>
           </div>
           <div className="team-member">
-            <img src={RyanImg} alt="Ryan" />
+            <img loading="lazy" src={RyanImg} alt="Ryan" />
             <h3>Ryan</h3>
             <p className="role">Financial Manager</p>
             <div className="description">
@@ -105,7 +105,7 @@ const About = () => {
             </div>
           </div>
           <div className="team-member">
-            <img src={FionaImg} alt="Fiona" />
+            <img loading="lazy" src={FionaImg} alt="Fiona" />
             <h3>Fiona</h3>
             <p className="role">Designer</p>
             <div className="description">
@@ -113,7 +113,7 @@ const About = () => {
             </div>
           </div>
           <div className="team-member">
-            <img src="https://via.placeholder.com/100" alt="Briana" />
+            <img loading="lazy" src="https://via.placeholder.com/100" alt="Briana" />
             <h3>Briana</h3>
             <p className="role">Designer</p>
             <div className="description">
@@ -121,7 +121,7 @@ const About = () => {
             </div>
           </div>
           <div className="team-member">
-            <img src={PeterImg} alt="Peter" />
+            <img loading="lazy" src={PeterImg} alt="Peter" />
             <h3>Peter</h3>
             <p className="role">Webmaster</p>
             <div className="description">
@@ -129,7 +129,7 @@ const About = () => {
             </div>
           </div>
           <div className="team-member">
-            <img src={MasonImg} alt="Mason" />
+            <img loading="lazy" src={MasonImg} alt="Mason" />
             <h3>Mason</h3>
             <p className="role">Social Media Manager</p>
             <div className="description">
