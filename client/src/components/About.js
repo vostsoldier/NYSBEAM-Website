@@ -51,7 +51,10 @@ const About = () => {
     <main>
       <section id="mission">
         <h2>Our Mission</h2>
-        <p>Information about NYSBEAM's mission.</p>
+        <p>Below is rough draft - will replace</p>
+        <p>We aim to help spread awareness about mental health, and how it is so important for everyday body functions</p>
+        <p>As teenagers ourselves, we realized that many people don't know how to alleviate stress effectively,</p>
+        <p>which is why we took this issue to heart, and created this organization to help struggling teens like us.</p>
       </section>
       <section id="team">
         <h2>Our Team</h2>
@@ -93,7 +96,7 @@ const About = () => {
             <h3>Aaron</h3>
             <p className="role">Co-Secretary</p>
             <div className="description">
-              <p>Aaron manages the creative design aspects for NYSBEAM.</p>
+              <p>Aaron works with Abdullah to reach out, and collaborate with other organizations.</p>
             </div>
           </div>
           <div className="team-member">
@@ -128,13 +131,15 @@ const About = () => {
               <p>Peter oversees the website maintenance and development for NYSBEAM.</p>
             </div>
           </div>
-          <div className="team-member">
-            <img loading="lazy" src={MasonImg} alt="Mason" />
-            <h3>Mason</h3>
-            <p className="role">Social Media Manager</p>
-            <div className="description">
-              <p>Mason manages the social media platforms and online presence for NYSBEAM.</p>
+          <div className="center-content">
+            <div className="team-member">
+                <img loading="lazy" src={MasonImg} alt="Mason" />
+                <h3>Mason</h3>
+                <p className="role">Social Media Manager</p>
+                <div className="description">
+                  <p>Mason manages the social media platforms and online presence for NYSBEAM.</p>
             </div>
+          </div>
           </div>
         </div>
       </section>

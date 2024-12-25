@@ -38,6 +38,11 @@ app.use('/api/newsletter', newsletterRoutes);
 
 app.get('/', (req, res) => {
     res.send('API is running...');
+    res.send('Connection successfully achieved...');
+    res.send('Client successfully connected');
+    res.send('If you somehow managed to get onto the random-ass site-')
+    res.send('Congrats... No prize')
+    res.send('DO NOT DARE TO SEND THIS TO ANYONE OKAY')
 });
 
 app.use((req, res, next) => {

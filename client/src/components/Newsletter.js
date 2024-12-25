@@ -35,7 +35,31 @@ const Newsletter = () => {
 
   useEffect(() => {
     const section = document.getElementById('newsletter-section');
+    const observerOptions = {
+      threshold: 0.1
+    };
 
+    const observer = new IntersectionObserver((entries, observerRef) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          observerRef.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => {
+      if (section) {
+        observer.unobserve(section);
+      }
+    };
+  }, []);
+  useEffect(() => {
+    const section = document.getElementById('newsletter-signup');
     const observerOptions = {
       threshold: 0.1
     };
@@ -61,24 +85,34 @@ const Newsletter = () => {
   }, []);
 
   return (
-    <div className="newsletter-container">
-      <section id="newsletter-section">
-        <h2>Subscribe to our Newsletter</h2>
-        {message && <p className="message">{message}</p>}
-        <form onSubmit={handleSubmit} className="newsletter-form">
-          <label htmlFor="email">Email:</label>
-          <input 
-            type="email" 
-            id="email" 
-            name="email" 
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required 
-          />
-          <button type="submit">Subscribe</button>
-        </form>
-      </section>
-    </div>
+    <>
+      <div className="newsletter-container2 ">
+        <section id="newsletter-section">
+          <h2>A Fresh Start</h2>
+          <h3>By: Vivian and Sidrat</h3>
+          <h5>December 24st, 2024</h5>
+          <p>Welcome Welcome, this is just a test and will be filled out later</p>
+        </section>
+      </div>
+      <div className="newsletter-container">
+        <section id="newsletter-signup">
+          <h2>Subscribe to our Newsletter</h2>
+          {message && <p className="message">{message}</p>}
+          <form onSubmit={handleSubmit} className="newsletter-form">
+            <label htmlFor="email">Email:</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required 
+            />
+            <button type="submit">Subscribe</button>
+          </form>
+        </section>
+      </div>
+    </>
   );
 };
 

@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
         {children}
       </main>
       <footer>
-        <p>&copy; 2023 NYSBEAM</p>
+        <p>&copy; 2024 NYSBEAM</p>
       </footer>
     </div>
   );
