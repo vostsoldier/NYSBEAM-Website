@@ -719,6 +719,9 @@ section.visible {
   border: 1px solid #CCCCCC;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  word-wrap: break-word;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .center-content {
   justify-content: center;

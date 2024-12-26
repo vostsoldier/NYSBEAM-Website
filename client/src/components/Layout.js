@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About Us</Link></li>
             <li><Link to="/newsletter">Newsletter</Link></li>
-            {/*<li><Link to="/projects">Our Projects</Link></li>*/}
+            <li><Link to="/events">Events</Link></li>
             {!isAuthenticated && <li><Link to="/signup">Create Account</Link></li>}
             {!isAuthenticated && <li><Link to="/login">Login</Link></li>}
             {isAuthenticated && <li><button onClick={logout} className="logout-button">Logout</button></li>}
