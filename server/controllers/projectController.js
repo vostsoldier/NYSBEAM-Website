@@ -1,4 +1,4 @@
-const Project = require('../models/Events');
+const Project = require('../models/Project');
 
 exports.getProjects = async (req, res) => {
     try {

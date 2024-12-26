@@ -726,3 +726,18 @@ section.visible {
 .center-content {
   justify-content: center;
 }
+.project-card button {
+  padding: 10px 20px;
+  background-color: #B1A0D0;
+  color: #FFFFFF;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.project-card button:hover {
+  background-color: #A392C0;
+}

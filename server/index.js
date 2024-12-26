@@ -31,20 +31,16 @@ app.use(express.json());
 const userRoutes = require('./routes/userRoutes');
 const projectRoutes = require('./routes/projectRoutes');
 const newsletterRoutes = require('./routes/newsletterRoutes');
-const eventRegistrationRoutes = require('./routes/eventRegistrationRoutes');
+const eventRegistrationRoutes = require('./routes/eventRegistrationRoutes'); // Ensure correct path
 
 app.use('/api/users', userRoutes);
 app.use('/api/projects', projectRoutes);
 app.use('/api/newsletter', newsletterRoutes);
-app.use('/api/event-registrations', eventRegistrationRoutes);
+app.use('/api/event-registrations', eventRegistrationRoutes); // Mount the event registration routes
 
 app.get('/', (req, res) => {
     res.send('API is running...');
-    res.send('Connection successfully achieved...');
-    res.send('Client successfully connected');
-    res.send('If you somehow managed to get onto the random-ass site-')
-    res.send('Congrats... No prize')
-    res.send('DO NOT DARE TO SEND THIS TO ANYONE OKAY')
+    // Removed additional res.send statements to prevent errors
 });
 
 app.use((req, res, next) => {

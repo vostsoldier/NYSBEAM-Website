@@ -95,13 +95,11 @@ const Projects = () => {
             <img src="https://via.placeholder.com/200" alt="Project Three" />
             <h3>Event Three</h3>
             <p className="project-description">A brief description of Project Three.</p>
-            {isAuthenticated && <button onClick={() => handleRegister(3)}>Register</button>}
           </div>
           <div className="project-card">
             <img src="https://via.placeholder.com/200" alt="Project Four" />
             <h3>Event Four</h3>
             <p className="project-description">A brief description of Project Four.</p>
-            {isAuthenticated && <button onClick={() => handleRegister(4)}>Register</button>}
           </div>
         </div>
       </section>
