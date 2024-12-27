@@ -46,20 +46,36 @@ const Home = () => {
           <p>BEAM is a non-profit organization founded in New York State, specifically New York City</p>
           <p>We promote mental health, such as the importance of caring for one's mental state,</p>
           <p>as well as spreading awareness about having a good mindset</p>
-          <p>We host online workshops, podcasts, fundraisers, and alot more!</p>
+          <p>We host online workshops, podcasts, fundraisers, and a lot more!</p>
         </section>
-        <h2>Activities</h2>
+        <h2>Media</h2>
+        <Link to="/newsletter" className="home-box-link">
+            <div className="home-box background-1">
+              <img src="https://via.placeholder.com/150" alt="Box 1" />
+              <p>Newsletters</p>
+              <span className="arrow">&#8594;</span>
+            </div>
+          </Link>
         <div className="home-boxes">
-          <div className="home-box">
-            <img src="https://via.placeholder.com/150" alt="Box 2" />
-            <p>Box-Breathing</p>
-            <Link to="/box-breathing"><button className="home-button">Get Started</button></Link>
-          </div>
+          <Link to="/events" className="home-box-link">
+            <div className="home-box background-2">
+              <img src="https://via.placeholder.com/150" alt="Box 2"/>
+              <p>Events</p>
+              <span className="arrow">&#8594;</span>
+            </div>
+          </Link>
+          <Link to="/box-breathing" className="home-box-link">
+            <div className="home-box background-1">
+              <img src="https://via.placeholder.com/150" alt="Box 1" />
+              <p>Box-Breathing</p>
+              <span className="arrow">&#8594;</span>
+            </div>
+          </Link>
         </div>
         <section id="contact">
           <h2>Contact Us</h2>
-          <p>Feel free to shoot us a email through board@nysbeam.org</p>
-          <p>Shoot us a follow and a tag on instagram, @NYSBEAM</p>
+          <p>Feel free to shoot us an email through board@nysbeam.org</p>
+          <p>Shoot us a follow and a tag on Instagram, @NYSBEAM</p>
         </section>
       </main>
     </div>
