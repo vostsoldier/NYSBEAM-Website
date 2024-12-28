@@ -11,7 +11,7 @@ const EventRegistration = sequelize.define('EventRegistration', {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-            model: 'Projects', // Assuming 'Project' represents 'Events'
+            model: 'Projects', 
             key: 'id'
         }
     },

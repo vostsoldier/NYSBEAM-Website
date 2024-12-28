@@ -22,7 +22,7 @@ app.use(cors({
     }
     return callback(null, true); 
   },
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Added 'OPTIONS'
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], 
   credentials: true,
 }));
 
@@ -31,16 +31,16 @@ app.use(express.json());
 const userRoutes = require('./routes/userRoutes');
 const projectRoutes = require('./routes/projectRoutes');
 const newsletterRoutes = require('./routes/newsletterRoutes');
-const eventRegistrationRoutes = require('./routes/eventRegistrationRoutes'); // Ensure correct path
+const eventRegistrationRoutes = require('./routes/eventRegistrationRoutes'); 
+const cacheMiddleware = require('./middleware/cacheMiddleware');
 
 app.use('/api/users', userRoutes);
-app.use('/api/projects', projectRoutes);
-app.use('/api/newsletter', newsletterRoutes);
-app.use('/api/event-registrations', eventRegistrationRoutes); // Mount the event registration routes
+app.use('/api/projects', cacheMiddleware, projectRoutes);
+app.use('/api/newsletter', cacheMiddleware, newsletterRoutes);
+app.use('/api/event-registrations', eventRegistrationRoutes); 
 
 app.get('/', (req, res) => {
     res.send('API is running...');
-    // Removed additional res.send statements to prevent errors
 });
 
 app.use((req, res, next) => {
