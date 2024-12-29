@@ -76,7 +76,7 @@ const Donate = () => {
 
   return (
     <div className="donate-container">
-      <section id="donate-section">
+      <section id="donate-section" className="donate-section">
         <h2>Donate to NYSBEAM</h2>
         {message && <p className="message">{message}</p>}
         <form onSubmit={handleSubmit} className="donate-form">

@@ -73,7 +73,7 @@ nav a:hover {
 }
 
 main {
-  padding: 80px 20px 20px 20px;
+  padding: 40px 20px 20px 20px;
   flex: 1;
   background-color: #FCF8FF;
 }
@@ -345,7 +345,7 @@ section.visible {
 }
 
 .app-container main {
-  padding-top: 80px;
+  padding-top: 20px;
 }
 
 #about p,
@@ -741,7 +741,7 @@ section.visible {
 
 .newsletter-container2 {
   max-width: 500px;
-  margin: auto auto 40px auto;
+  margin: 15px auto 40px auto;
   padding: 13px 20px;
   background-color: #FFFFFF;
   border: 1px solid #CCCCCC;
@@ -788,16 +788,15 @@ section.visible {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .donate-bar:hover {
-  background-color: #483D8B;
+  background-color: #B1A0D0;
   transform: scale(1.05); 
   cursor: pointer;
 }
 
-/* Donate Page Styles */
 .donate-container {
   max-width: 600px;
-  margin: 0 auto;
-  padding: 40px 20px;
+  margin: 0 auto 20px auto;
+  padding: 20px 20px;
   background-color: #FFFFFF;
   border: 1px solid #CCCCCC;
   border-radius: 10px;
@@ -845,6 +844,10 @@ section.visible {
   background-color: #A392C0;
 }
 
+.donate-section {
+  margin-bottom: 0px !important;
+}
+
 .message {
   color: green;
   margin-bottom: 15px;
@@ -866,6 +869,7 @@ section.visible {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 40px;
+  margin-top: 45px;
   border-radius: 10px;
 }
 
@@ -881,8 +885,9 @@ section.visible {
 
 .hero-button {
   padding: 15px 30px;
-  background-color: #4CAF50;
+  background-color: #B1A0D0;
   color: #ffffff;
+  font-weight: bold;
   text-decoration: none;
   border-radius: 5px;
   font-size: 1.2em;
@@ -890,7 +895,8 @@ section.visible {
 }
 
 .hero-button:hover {
-  background-color: #45a049;
+  background-color: #A392C0;
+  transform: scale(1.05);
 }
 
 .testimonials-section {
@@ -924,7 +930,9 @@ section.visible {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
+.home-main {
+  margin-top: 90px;
+}
 .left-arrow,
 .right-arrow {
   cursor: pointer;
@@ -978,7 +986,4 @@ section.visible {
     transform: translateX(0);
     opacity: 1;
   }
-}
-img {
-  loading: lazy;
 }

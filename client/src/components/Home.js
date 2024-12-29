@@ -43,7 +43,7 @@ const Home = () => {
   return (
     <div>
       <HeroSection />
-      <main>
+      <main className="home-main">
         {/*<section id="about">
           <h2>About Us</h2>
           <p>BEAM is a non-profit organization founded in New York State, specifically New York City</p>
@@ -55,7 +55,7 @@ const Home = () => {
         <h2>Media</h2>
         <Link to="/newsletter" className="home-box-link">
           <div className="home-box background-1">
-            <img src="https://via.placeholder.com/150" alt="Box 1" />
+            <img loading="lazy" src="https://via.placeholder.com/150" alt="Box 1" />
             <p>Newsletters</p>
             <span className="arrow">&#8594;</span>
           </div>
@@ -63,14 +63,14 @@ const Home = () => {
         <div className="home-boxes">
           <Link to="/events" className="home-box-link">
             <div className="home-box background-2">
-              <img src="https://via.placeholder.com/150" alt="Box 2"/>
+              <img loading="lazy" src="https://via.placeholder.com/150" alt="Box 2"/>
               <p>Events</p>
               <span className="arrow">&#8594;</span>
             </div>
           </Link>
           <Link to="/box-breathing" className="home-box-link">
             <div className="home-box background-1">
-              <img src="https://via.placeholder.com/150" alt="Box 1" />
+              <img loading="lazy" src="https://via.placeholder.com/150" alt="Box 1" />
               <p>Box-Breathing</p>
               <span className="arrow">&#8594;</span>
             </div>

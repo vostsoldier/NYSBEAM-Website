@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const sequelize = require('./config/config');
+const compression = require('compression');
 
 dotenv.config();
 
@@ -26,6 +27,7 @@ app.use(cors({
   credentials: true,
 }));
 
+app.use(compression());
 app.use(express.json());
 
 const userRoutes = require('./routes/userRoutes');

@@ -75,13 +75,13 @@ const Projects = () => {
         <h2>Upcoming Events</h2>
         <div className="projects-container">
           <div className="project-card">
-            <img src="https://via.placeholder.com/200" alt="Project One" />
+            <img loading="lazy" src="https://via.placeholder.com/200" alt="Project One" />
             <h3>Event One</h3>
             <p className="project-description">A brief description of Project One.</p>
             {isAuthenticated && <button onClick={() => handleRegister(1)}>Register</button>}
           </div>
           <div className="project-card">
-            <img src="https://via.placeholder.com/200" alt="Project Two" />
+            <img loading="lazy" src="https://via.placeholder.com/200" alt="Project Two" />
             <h3>Event Two</h3>
             <p className="project-description">A brief description of Project Two.</p>
             {isAuthenticated && <button onClick={() => handleRegister(2)}>Register</button>}
@@ -92,12 +92,12 @@ const Projects = () => {
         <h2>Event Archive</h2>
         <div className="projects-container">
           <div className="project-card">
-            <img src="https://via.placeholder.com/200" alt="Project Three" />
+            <img loading="lazy" src="https://via.placeholder.com/200" alt="Project Three" />
             <h3>Event Three</h3>
             <p className="project-description">A brief description of Project Three.</p>
           </div>
           <div className="project-card">
-            <img src="https://via.placeholder.com/200" alt="Project Four" />
+            <img loading="lazy" src="https://via.placeholder.com/200" alt="Project Four" />
             <h3>Event Four</h3>
             <p className="project-description">A brief description of Project Four.</p>
           </div>
