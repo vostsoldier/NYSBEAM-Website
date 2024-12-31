@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../index.css';
+import '../styles/BoxBreathing.css'
 
 const BoxBreathing = () => {
   const [isStarted, setIsStarted] = useState(false);

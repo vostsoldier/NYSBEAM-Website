@@ -94,24 +94,6 @@ const Newsletter = () => {
           <p>Welcome Welcome, this is just a test and will be filled out later</p>
         </section>
       </div>
-      <div className="newsletter-container">
-        <section id="newsletter-signup">
-          <h2>Subscribe to our Newsletter</h2>
-          {message && <p className="message">{message}</p>}
-          <form onSubmit={handleSubmit} className="newsletter-form">
-            <label htmlFor="email">Email:</label>
-            <input 
-              type="email" 
-              id="email" 
-              name="email" 
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required 
-            />
-            <button type="submit">Subscribe</button>
-          </form>
-        </section>
-      </div>
     </>
   );
 };

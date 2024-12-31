@@ -1,10 +1,40 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'; 
 import '../index.css'; 
 import HeroSection from './HeroSection';
 import TestimonialCarousel from './TestimonialCarousel';
 
 const Home = () => {
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setMessage('');
+
+    try {
+      const apiUrl = process.env.REACT_APP_API_URL.replace(/\/+$/, '');
+
+      const response = await fetch(`${apiUrl}/newsletter/subscribe`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email })
+      });
+
+      const data = await response.json();
+
+      if(response.ok){
+        setMessage('Subscribed successfully!');
+        setEmail('');
+      } else {
+        setMessage(data.message || 'Subscription failed');
+      }
+    } catch (err) {
+      setMessage('An error occurred. Please try again.');
+    }
+  };
   useEffect(() => {
     const sections = document.querySelectorAll('section');
     const headerTitle = document.querySelector('header h1');
@@ -41,9 +71,20 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
-      <HeroSection />
-      <main className="home-main">
+    <>
+      <div>
+        <HeroSection />
+        <main className="home-main">
+          <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Feel free to shoot us an email through board@nysbeam.org</p>
+            <p>Shoot us a follow and a tag on Instagram, @NYSBEAM</p>
+          </section>
+        </main>
+      </div>
+    </>
+  );
+};
         {/*<section id="about">
           <h2>About Us</h2>
           <p>BEAM is a non-profit organization founded in New York State, specifically New York City</p>
@@ -51,7 +92,7 @@ const Home = () => {
           <p>as well as spreading awareness about having a good mindset</p>
           <p>We host online workshops, podcasts, fundraisers, and a lot more!</p>
         </section>*/}
-        {/*<TestimonialCarousel />*/}
+        {/*<TestimonialCarousel />
         <h2>Media</h2>
         <Link to="/newsletter" className="home-box-link">
           <div className="home-box background-1">
@@ -75,15 +116,6 @@ const Home = () => {
               <span className="arrow">&#8594;</span>
             </div>
           </Link>
-        </div>
-        <section id="contact">
-          <h2>Contact Us</h2>
-          <p>Feel free to shoot us an email through board@nysbeam.org</p>
-          <p>Shoot us a follow and a tag on Instagram, @NYSBEAM</p>
-        </section>
-      </main>
-    </div>
-  );
-};
+        </div>*/}
 
 export default Home;
